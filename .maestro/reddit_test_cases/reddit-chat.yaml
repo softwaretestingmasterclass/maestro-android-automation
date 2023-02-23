@@ -1,0 +1,5 @@
+appId: com.reddit.frontpage
+---
+- runFlow: commons/reddit-start.yaml
+- tapOn: "Chat"
+- assertVisible: "Sign up to chat."

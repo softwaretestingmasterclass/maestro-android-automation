@@ -1,0 +1,6 @@
+appId: com.reddit.frontpage
+---
+- launchApp:
+    clearState: true
+    stopApp: true
+- tapOn: "Skip"

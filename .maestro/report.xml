@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="RF8MB0AY4JL" tests="5" failures="0">
+    <testcase id="reddit-home" name="reddit-home"/>
+    <testcase id="reddit-discover" name="reddit-discover"/>
+    <testcase id="reddit-create" name="reddit-create"/>
+    <testcase id="reddit-chat" name="reddit-chat"/>
+    <testcase id="reddit-inbox" name="reddit-inbox"/>
+  </testsuite>
+</testsuites>

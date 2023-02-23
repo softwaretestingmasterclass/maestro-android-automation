@@ -1,0 +1,10 @@
+appId: com.reddit.frontpage
+---
+- runFlow: commons/reddit-start.yaml
+- tapOn: "Create"
+- assertVisible: "Join Reddit"
+- assertVisible: "Sign up to upvote the best content."
+- assertVisible:
+    id: "com.reddit.frontpage:id/login_button"
+- assertVisible:
+    id: "com.reddit.frontpage:id/signup_button"

@@ -1,0 +1,15 @@
+appId: com.reddit.frontpage
+---
+- runFlow: commons/reddit-start.yaml
+- assertVisible:
+    text: "Home"
+    index: 0
+- assertVisible: "Search"
+- assertVisible:
+    id: "com.reddit.frontpage:id/inner_user_icon"
+    index: 0
+- assertVisible: "Home"
+- assertVisible: "Discover"
+- assertVisible: "Create"
+- assertVisible: "Chat"
+- assertVisible: "Inbox"

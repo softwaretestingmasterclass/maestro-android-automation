@@ -1,0 +1,11 @@
+appId: com.reddit.frontpage
+---
+- runFlow: commons/reddit-start.yaml
+- tapOn: "Discover"
+- assertVisible:
+    id: "com.reddit.frontpage:id/search_view"
+- assertVisible:
+    id: "All"
+- assertVisible:
+    id: "com.reddit.frontpage:id/image"
+    index: 0

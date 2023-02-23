@@ -1,0 +1,12 @@
+appId: com.reddit.frontpage
+---
+- runFlow: commons/reddit-start.yaml
+- tapOn: "Inbox"
+- assertVisible:
+    text: "Notifications"
+    index: 1
+- assertVisible:
+    text: "Messages"
+    index: 1
+- assertVisible: "Too much info? Not enough info?"
+- assertVisible: "Wow, such empty"
