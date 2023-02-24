@@ -1,0 +1,40 @@
+name: Test on SauceLabs
+
+on: [push]
+
+env:
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install APK
+        run: adb install -r DuckDuckGoBrowser.apk
+
+      - name: Test on SauceLabs
+        uses: saucelabs/saucectl-github-action@v1.0
+        with:
+          platformName: 'Android'
+          platformVersion: '10.0'
+          app: 'DuckDuckGoBrowser.apk'
+          appWaitActivity: 'com.duckduckgo.mobile.android.ui.onboarding.OnboardingActivity'
+          deviceName: 'Samsung Galaxy S21 Plus GoogleAPI Emulator'
+          browserName: 'Chrome'
+          saucectl-version: 'latest'
+          saucectl-args: '--region us-west-1 --test-env maestro --test-run-comment "maestro test duckduckgo_test_cases"'
+        env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
