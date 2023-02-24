@@ -1,0 +1,18 @@
+appId: com.duckduckgo.mobile.android
+---
+- runFlow: commons/duckduckgo-start.yaml
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/searchIcon"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/omnibarTextInput"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/fireIconMenu"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/tabsMenu"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/browserMenuImageView"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/logo"
+- assertVisible: "Next, try visiting one of your favorite sites!\n\nI'll block trackers\
+    \ so they can't spy on you. I'll also upgrade the security of your connection\
+    \ if possible. \U0001f512"

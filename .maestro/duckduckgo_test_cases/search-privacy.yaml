@@ -1,0 +1,9 @@
+appId: com.duckduckgo.mobile.android
+---
+- runFlow: commons/duckduckgo-start.yaml
+- inputText: "Software Testing Masterclass Ozan"
+- pressKey: Enter
+- assertVisible: "Your DuckDuckGo searches are anonymous. Always. \U0001f64c"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/logo"
+- assertVisible: "Phew!"

@@ -1,0 +1,11 @@
+appId: com.duckduckgo.mobile.android
+---
+- runFlow: commons/duckduckgo-start.yaml
+- tapOn:
+    id: "com.duckduckgo.mobile.android:id/fireIconMenu"
+- assertVisible:
+    id: "com.duckduckgo.mobile.android:id/logo"
+- assertVisible: "Personal data can build up in your browser. Yuck. Use the Fire Button\
+    \ to burn it all away. Give it a try now! \U0001f447"
+- assertVisible: "Clear All Tabs And Data"
+- assertVisible: "Cancel"
